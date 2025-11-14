@@ -248,7 +248,7 @@ export const WEB3FORMS_CONFIG = {
 
 // SEO Meta Data
 export const SEO_META = {
-  title: "D'Ele Services - Professional Cleaning Services in Toronto & GTA",
+  title: "D'Ele Cleaning Services - Professional Cleaning  Services in Toronto & GTA",
   description:
     "Reliable residential and commercial cleaning services in Toronto and GTA. Regular cleaning, deep cleaning, move in/out, and after construction cleaning. Get your free quote today!",
   keywords: [
