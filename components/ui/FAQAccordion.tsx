@@ -24,7 +24,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
           {/* Question Button */}
           <button
             onClick={() => toggleItem(index)}
-            className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-[var(--color-bg-light)]"
+            className="flex w-full cursor-pointer items-center justify-between p-5 text-left transition-colors hover:bg-[var(--color-bg-light)]"
             aria-expanded={openIndex === index}
           >
             <span className="pr-4 text-lg font-semibold text-[var(--color-text)]">

@@ -27,7 +27,7 @@ export function Footer() {
           <div>
             <div className="mb-4 flex items-center gap-2">
               <Image
-                src="/dele_logo.jpeg"
+                src="/dele-logo.png"
                 alt="D'Ele Services Logo"
                 width={40}
                 height={40}
@@ -50,7 +50,7 @@ export function Footer() {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-sm text-white/80 transition-colors hover:text-white"
+                    className="cursor-pointer text-sm text-white/80 transition-colors hover:text-white"
                   >
                     {link.label}
                   </button>
@@ -77,7 +77,7 @@ export function Footer() {
                 </svg>
                 <a
                   href={`mailto:${CONTACT_INFO.email}`}
-                  className="transition-colors hover:text-white"
+                  className="cursor-pointer transition-colors hover:text-white"
                 >
                   {CONTACT_INFO.email}
                 </a>
@@ -96,7 +96,7 @@ export function Footer() {
                 </svg>
                 <a
                   href={`tel:${CONTACT_INFO.phone.replace(/\D/g, "")}`}
-                  className="transition-colors hover:text-white"
+                  className="cursor-pointer transition-colors hover:text-white"
                 >
                   {CONTACT_INFO.phone}
                 </a>
@@ -127,7 +127,7 @@ export function Footer() {
             </p>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 text-sm text-white/60 transition-colors hover:text-white"
+              className="flex cursor-pointer items-center gap-1 text-sm text-white/60 transition-colors hover:text-white"
               aria-label="Back to top"
             >
               Back to top

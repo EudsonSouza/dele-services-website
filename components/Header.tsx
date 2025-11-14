@@ -41,10 +41,10 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/dele_logo.jpeg"
+            src="/dele-logo.png"
             alt="D'Ele Services Logo"
-            width={50}
-            height={50}
+            width={100}
+            height={100}
             className="h-12 w-auto"
             priority
           />
@@ -59,7 +59,7 @@ export function Header() {
             <button
               key={link.href}
               onClick={() => scrollToSection(link.href)}
-              className="text-sm font-medium text-[var(--color-text)] transition-colors hover:text-[var(--color-primary)]"
+              className="cursor-pointer text-sm font-medium text-[var(--color-text)] transition-colors hover:text-[var(--color-primary)]"
             >
               {link.label}
             </button>
@@ -79,7 +79,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="cursor-pointer md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
@@ -109,7 +109,7 @@ export function Header() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full rounded-md px-3 py-2 text-left text-base font-medium text-[var(--color-text)] transition-colors hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary)]"
+                className="block w-full cursor-pointer rounded-md px-3 py-2 text-left text-base font-medium text-[var(--color-text)] transition-colors hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary)]"
               >
                 {link.label}
               </button>
