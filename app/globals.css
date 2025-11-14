@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  /* D'Ele Services Brand Colors */
+  --color-primary: #3B5A75;
+  --color-primary-light: #88AFB4;
+  --color-secondary: #889AA7;
+  --color-accent: #C49D74;
+
+  /* Neutrals */
+  --color-bg: #FFFFFF;
+  --color-bg-light: #F5F7F8;
+  --color-text: #1A1A1A;
+  --color-text-light: #4A4A4A;
+
+  /* Legacy variables for compatibility */
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-primary: #3B5A75;
+  --color-primary-light: #88AFB4;
+  --color-secondary: #889AA7;
+  --color-accent: #C49D74;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Courier New", monospace;
+
+  /* Spacing scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
