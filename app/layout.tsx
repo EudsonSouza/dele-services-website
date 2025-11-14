@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: SEO_META.title,
   description: SEO_META.description,
   keywords: SEO_META.keywords,
+  icons: {
+    icon: "/dele-logo.png",
+    shortcut: "/dele-logo.png",
+    apple: "/dele-logo.png",
+  },
   openGraph: {
     title: SEO_META.title,
     description: SEO_META.description,
