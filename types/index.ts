@@ -62,6 +62,16 @@ export interface Service {
   description: string;
   icon?: string;
   features?: string[];
+  detailedInclusions?: ServiceInclusions;
+}
+
+// Detailed service inclusions (What's Included section)
+export interface ServiceInclusions {
+  allRooms?: string[];
+  kitchen?: string[];
+  bathroom?: string[];
+  bedrooms?: string[];
+  livingRoom?: string[];
 }
 
 // Pricing Card Props
