@@ -3,9 +3,9 @@ import React from "react";
 const steps = [
   {
     id: 1,
-    title: "Request Your Quote",
+    title: "Contact Us",
     description:
-      "Fill out our simple form with your cleaning needs. We'll respond within 24 hours with a personalized quote.",
+      "Reach out via phone, email, or our contact form. Tell us about your cleaning needs and preferred time for a visit.",
     icon: (
       <svg
         className="h-12 w-12"
@@ -16,15 +16,15 @@ const steps = [
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
   },
   {
     id: 2,
-    title: "Schedule Your Cleaning",
+    title: "Schedule Your Free Visit",
     description:
-      "Choose a date and time that works best for you. We offer flexible scheduling including evenings and weekends.",
+      "We'll visit your property to assess your space and provide a personalized quote based on your specific needs and conditions.",
     icon: (
       <svg
         className="h-12 w-12"
@@ -43,7 +43,7 @@ const steps = [
     id: 3,
     title: "Enjoy Your Spotless Space",
     description:
-      "Relax while our professional team transforms your space. We guarantee your satisfaction with every service.",
+      "Once you approve the quote, we'll schedule your cleaning and our professional team will deliver exceptional results.",
     icon: (
       <svg
         className="h-12 w-12"
@@ -120,7 +120,7 @@ export function Process() {
             }}
             className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-[var(--color-accent)] px-8 py-4 text-lg font-medium text-white transition-all hover:scale-105 hover:shadow-lg"
           >
-            Get Started Today
+            Schedule Your Free Visit
             <svg
               className="h-5 w-5"
               fill="none"

@@ -19,13 +19,6 @@ export function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const scrollToServices = () => {
     const element = document.querySelector("#services");
     if (element) {
@@ -65,8 +58,15 @@ export function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button variant="accent" size="lg" onClick={scrollToContact}>
-                Get Your Free Quote
+              <Button
+                variant="accent"
+                size="lg"
+                onClick={() => {
+                  const element = document.querySelector("#contact");
+                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Schedule Your Free Visit
               </Button>
               <Button variant="secondary" size="lg" onClick={scrollToServices}>
                 See Services

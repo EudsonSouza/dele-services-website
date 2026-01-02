@@ -17,11 +17,10 @@ export const COLORS = {
   textLight: "#4A4A4A",
 } as const;
 
-// Navigation Links
+// Navigation Links (Visit-Based Model - No Pricing)
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
   { label: "Process", href: "#process" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
@@ -97,84 +96,23 @@ export const SERVICES: Service[] = [
   },
 ];
 
-// Pricing Tiers
-export const PRICING_TIERS: PricingTier[] = [
-  {
-    id: "regular-weekly",
-    name: "Regular Cleaning",
-    price: "$22",
-    frequency: "per week",
-    features: [
-      "Weekly service",
-      "All rooms included",
-      "Basic supplies included",
-      "Flexible scheduling",
-    ],
-  },
-  {
-    id: "regular-biweekly",
-    name: "Regular Cleaning",
-    price: "$24",
-    frequency: "bi-weekly",
-    features: [
-      "Bi-weekly service",
-      "All rooms included",
-      "Basic supplies included",
-      "Flexible scheduling",
-    ],
-  },
-  {
-    id: "deep",
-    name: "Deep Cleaning",
-    price: "$50",
-    frequency: "per session",
-    features: [
-      "Comprehensive cleaning",
-      "Top to bottom",
-      "Behind furniture",
-      "Perfect for spring cleaning",
-    ],
-    highlighted: true,
-  },
-  {
-    id: "move-in",
-    name: "Move In",
-    price: "$45",
-    frequency: "per session",
-    features: [
-      "Pre-move preparation",
-      "Complete sanitization",
-      "Cabinets & appliances",
-      "Ready to move in",
-    ],
-  },
-  {
-    id: "move-out",
-    name: "Move Out",
-    price: "$50",
-    frequency: "per session",
-    features: [
-      "Deposit-ready cleaning",
-      "All areas covered",
-      "Final inspection ready",
-      "Landlord approved",
-    ],
-  },
-];
+// ⚠️ PRICING REMOVED - Visit-Based Quoting Model
+// Pricing information is no longer displayed on website
+// Quotes provided after free on-site visit
 
-// FAQ Data
+// FAQ Data (Updated for Visit-Based Model)
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    id: "supplies",
-    question: "Do you bring your own cleaning products?",
+    id: "quote",
+    question: "How do I get a quote?",
     answer:
-      "Yes! We can provide all cleaning supplies for an additional $25 (regular cleaning) or $50+ (deep/move services). Alternatively, you can provide your own supplies at no extra charge.",
+      "Contact us to schedule a free visit. We'll assess your property in person and provide a detailed, personalized quote based on your specific needs and the condition of your space. This ensures accurate pricing tailored to your requirements.",
   },
   {
     id: "schedule",
     question: "How do I schedule a service?",
     answer:
-      "Simply fill out our quote request form with your details and preferred date. We'll contact you within 24 hours to confirm your booking and discuss any specific requirements.",
+      "Fill out our contact form with your details and preferred date for a free visit. We'll contact you within 24 hours to confirm your appointment and discuss any specific requirements.",
   },
   {
     id: "airbnb",
@@ -186,52 +124,23 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "service-area",
     question: "What areas do you serve?",
     answer:
-      "We serve Toronto (no additional charge) and the Greater Toronto Area (GTA) with a $20 travel fee. Contact us if you're unsure whether we cover your location.",
-  },
-  {
-    id: "pricing",
-    question: "How does pricing work?",
-    answer:
-      "Our pricing is transparent and depends on the service type, number of rooms, and whether we provide supplies. Regular cleaning starts at $22/week, while specialized services like deep cleaning and move-in/out have fixed rates.",
+      "We proudly serve Toronto and the Greater Toronto Area (GTA). Contact us to confirm we cover your specific location.",
   },
   {
     id: "preparation",
     question: "What should I prepare before the cleaning?",
     answer:
-      "Please pick up clutter and personal items, secure pets in a safe area, and let us know of any areas requiring special attention. If you're providing supplies, ensure they're accessible.",
+      "Please pick up clutter and personal items, secure pets in a safe area, and let us know of any areas requiring special attention. Our team will discuss specific requirements during the free visit.",
   },
 ];
 
-// Required Supplies (if client provides)
-export const REQUIRED_SUPPLIES = [
-  "Clorox with bleach",
-  "Windex",
-  "Lysol (toilet bowl cleaner)",
-  "Vim",
-  "Paper towels",
-  "Swiffer",
-  "Vacuum",
-  "Mop + bucket",
-  "Cleaning cloths",
-];
-
-// Supplies Add-on Pricing
-export const SUPPLIES_PRICING = {
-  regular: 25,
-  deep: 50,
-  move: 50,
-} as const;
-
-// Service Area Pricing
-export const SERVICE_AREA_PRICING = {
-  toronto: 0,
-  gta: 20,
-} as const;
+// ⚠️ SUPPLIES & PRICING DATA REMOVED
+// All pricing and supplies information discussed during free visit
 
 // Contact Information
 export const CONTACT_INFO = {
-  email: "contact@deleservices.ca", // Update with real email
-  phone: "+1 (416) XXX-XXXX", // Update with real phone
+  email: "deleservices.ca@gmail.com",
+  phone: "+1 (416) XXX-XXXX", // Update with real phone when available
   businessHours: "Monday - Saturday: 8:00 AM - 6:00 PM",
   serviceArea: "Toronto & GTA",
 };
@@ -240,8 +149,9 @@ export const CONTACT_INFO = {
 export const WEB3FORMS_CONFIG = {
   accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
   redirectUrl: "/thank-you",
+  recipientEmail: "deleservices.ca@gmail.com",
   subject: {
-    quote: "New Quote Request - D'Ele Services",
+    visit: "New Visit Request - D'Ele Services",
     contact: "New Contact Message - D'Ele Services",
   },
 };

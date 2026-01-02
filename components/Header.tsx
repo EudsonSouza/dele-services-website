@@ -73,7 +73,7 @@ export function Header() {
             size="md"
             onClick={() => scrollToSection("#contact")}
           >
-            Get Quote
+            Contact Us
           </Button>
         </div>
 
@@ -121,7 +121,7 @@ export function Header() {
                 fullWidth
                 onClick={() => scrollToSection("#contact")}
               >
-                Get Quote
+                Contact Us
               </Button>
             </div>
           </div>

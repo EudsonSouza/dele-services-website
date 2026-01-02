@@ -1,6 +1,7 @@
 /**
  * Web3Forms Integration Utility
  * Handles form submissions to Web3Forms API
+ * Updated for Visit-Based Quoting Model
  */
 
 import type { QuoteRequest, ContactMessage } from "@/types";
@@ -14,9 +15,9 @@ interface Web3FormsResponse {
 }
 
 /**
- * Submit quote request to Web3Forms
+ * Submit visit request to Web3Forms (Visit-Based Quoting Model)
  */
-export async function submitQuoteRequest(
+export async function submitVisitRequest(
   data: QuoteRequest
 ): Promise<Web3FormsResponse> {
   try {
@@ -24,21 +25,16 @@ export async function submitQuoteRequest(
 
     // Add Web3Forms required fields
     formData.append("access_key", WEB3FORMS_CONFIG.accessKey);
-    formData.append("subject", WEB3FORMS_CONFIG.subject.quote);
+    formData.append("subject", WEB3FORMS_CONFIG.subject.visit);
     formData.append("from_name", data.fullName);
     formData.append("redirect", WEB3FORMS_CONFIG.redirectUrl);
 
-    // Add form data
+    // Add form data (only fields that still exist in visit-based model)
     formData.append("fullName", data.fullName);
     formData.append("email", data.email);
     formData.append("phone", data.phone);
     formData.append("typeOfCleaning", data.typeOfCleaning);
-    formData.append("numberOfRooms", data.numberOfRooms?.toString() || "");
-    formData.append("location", data.location);
-    formData.append("suppliesOption", data.suppliesOption);
     formData.append("address", data.address);
-    formData.append("city", data.city || "");
-    formData.append("postalCode", data.postalCode || "");
     formData.append("preferredDate", data.preferredDate || "");
     formData.append("additionalNotes", data.additionalNotes || "");
     formData.append("acceptsPolicy", data.acceptsPolicy.toString());
@@ -112,3 +108,6 @@ export async function submitContactMessage(
     };
   }
 }
+
+// Legacy alias for backward compatibility
+export const submitQuoteRequest = submitVisitRequest;

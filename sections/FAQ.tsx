@@ -26,7 +26,7 @@ export function FAQ() {
             Still have questions?
           </h3>
           <p className="mb-6 text-[var(--color-text-light)]">
-            We're here to help! Contact us directly and we'll get back to you
+            We&apos;re here to help! Contact us directly and we&apos;ll get back to you
             within 24 hours.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
