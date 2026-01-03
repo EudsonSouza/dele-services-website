@@ -8,6 +8,7 @@ import { Services } from "@/sections/Services";
 // import { Pricing } from "@/sections/Pricing"; // REMOVED - Visit-based quoting model
 import { Process } from "@/sections/Process";
 import { FAQ } from "@/sections/FAQ";
+import { VisitRequestForm } from "@/sections/VisitRequestForm";
 
 export default function Home() {
   return (
@@ -20,17 +21,7 @@ export default function Home() {
         {/* Pricing section removed - Visit-based quoting model */}
         <Process />
         <FAQ />
-        {/* Visit Request Form - Coming soon */}
-        <div id="contact" className="bg-[var(--color-bg-light)] py-20">
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <h2 className="mb-4 text-3xl font-bold text-[var(--color-text)]">
-              Visit Request Form Coming Soon
-            </h2>
-            <p className="text-lg text-[var(--color-text-light)]">
-              Contact form will be implemented to schedule your free visit
-            </p>
-          </div>
-        </div>
+        <VisitRequestForm />
       </main>
       <Footer />
     </>
